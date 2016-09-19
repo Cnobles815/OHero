@@ -77,7 +77,7 @@ public class MenuLogic {
                 display.print("  Legends are dead. Myths are forgotten. So what are you?");
                 hero = new Hero("Delgado", 9, 9, 19, 11);
                 display.print("  HERO LEVEL:");
-                display.printInt(hero.heroLevel());
+                display.printInt( hero.heroLevel());
                 break;
 
             case BASILISK:
