@@ -6,6 +6,7 @@ import java.util.Scanner;
  */
 public class UserInput {
     Scanner userInput1 = new Scanner(System.in);
+    MenuLogic menuLogic = new MenuLogic();
 
     public String prompt(){
         String output = userInput1.next();
@@ -19,6 +20,12 @@ public class UserInput {
 
     public double promptDouble() {
         double output = userInput1.nextDouble();
+        return output;
+    }
+
+    public MenuLogic.Name promptName() {
+
+        MenuLogic.Name output = MenuLogic.Name.valueOf(userInput1.next().toUpperCase());
         return output;
     }
 
