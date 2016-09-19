@@ -71,7 +71,7 @@ public class Hero {
 
         setHeroStr(levelUp);
 
-        return levelUp;
+        return (levelUp);
     }
 
     public int heroEnUp(int amountIncrease) {

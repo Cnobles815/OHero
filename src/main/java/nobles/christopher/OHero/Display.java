@@ -13,4 +13,8 @@ public class Display {
     public void printInt(int output){
         System.out.println(output);
     }
+
+    public void printInt(Integer output){
+        System.out.println(output);
+    }
 }
