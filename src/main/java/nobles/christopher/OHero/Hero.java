@@ -15,9 +15,13 @@ public class Hero {
         int hp = 0;
         int spd = 0;
         int en = 0;
+    }
 
-
-
+    Hero () {
+        int str = 0;
+        int hp = 0;
+        int spd = 0;
+        int en = 0;
     }
 
 
