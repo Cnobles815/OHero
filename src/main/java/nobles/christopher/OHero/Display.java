@@ -9,4 +9,8 @@ public class Display {
         System.out.println(output);
 
     }
+
+    public void printInt(int output){
+        System.out.println(output);
+    }
 }

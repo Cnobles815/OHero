@@ -1,31 +1,53 @@
 package nobles.christopher.OHero;
 
 /**
- * str = Strength, hp = Health Points, spd = Speed, en = Energy
+ * heroStr = Strength, hp = Health Points, spd = Speed, en = Energy
  */
 public class Hero {
-    int str;
-    int hp;
-    int spd;
-    int en;
-    String name;
+    String heroName = "";
+    int heroStr = 0;
+    int heroHp = 0;
+    int heroSpd = 0;
+    int heroEn = 0;
 
-    Hero(int strength, int healthPoints, int speed, int energy) {
-        String name = "";
-        int str = strength;
-        int hp = healthPoints;
-        int spd = speed;
-        int en = energy;
 
-        if
+   public Hero (String name, int strength, int healthPoints, int speed, int energy) {
+        this.heroName = name;
+        this.heroStr = strength;
+        this.heroHp = healthPoints;
+        this.heroSpd = speed;
+        this.heroEn = energy;
     }
 
     Hero () {
-        String name = "Booster Gold";
-        int str = 0;
-        int hp = 0;
-        int spd = 0;
-        int en = 0;
+        String heroName = "Booster Gold";
+        int heroStr = 0;
+        int heroHp = 0;
+        int heroSpd = 0;
+        int heroEn = 0;
+    }
+
+    public int getHeroStr(){
+        return this.heroStr;
+    }
+
+    public int getHeroHp(){
+        return this.heroHp;
+    }
+
+    public int getHeroSpd(){
+        return this.heroSpd;
+    }
+
+    public int getHeroEn(){
+        return this.heroEn;
+    }
+
+    public int heroLevel() {
+
+        int level = this.getHeroEn() + this.getHeroSpd() + this.getHeroHp() + this.getHeroStr();
+
+        return level;
     }
 
 
