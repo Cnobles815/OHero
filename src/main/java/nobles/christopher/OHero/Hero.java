@@ -43,12 +43,62 @@ public class Hero {
         return this.heroEn;
     }
 
+    public void setHeroStr(int change){
+        this.heroStr = change;
+    }
+
+    public void setHeroHp(int change){
+        this.heroHp = change;
+    }
+
+    public void setHeroSpd(int change){
+        this.heroSpd = change;
+    }
+
+    public void setHeroEn(int change){
+        this.heroEn = change;
+    }
+
     public int heroLevel() {
 
         int level = this.getHeroEn() + this.getHeroSpd() + this.getHeroHp() + this.getHeroStr();
 
         return level;
     }
+
+    public int heroStrUp(int amountIncrease) {
+        int levelUp = getHeroStr() + amountIncrease;
+
+        setHeroStr(levelUp);
+
+        return levelUp;
+    }
+
+    public int heroEnUp(int amountIncrease) {
+        int levelUp = getHeroEn() + amountIncrease;
+
+        setHeroEn(levelUp);
+
+        return levelUp;
+    }
+
+    public int heroSpdUp(int amountIncrease) {
+        int levelUp = getHeroSpd() + amountIncrease;
+
+        setHeroSpd(levelUp);
+
+        return levelUp;
+    }
+
+    public int heroHpUp(int amountIncrease) {
+        int levelUp = getHeroHp() + amountIncrease;
+
+        setHeroHp(levelUp);
+
+        return levelUp;
+    }
+
+
 
 
 
