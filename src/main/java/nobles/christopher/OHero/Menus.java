@@ -7,6 +7,10 @@ public class Menus {
     Display display = new Display();
     UserInput userInput = new UserInput();
     MenuLogic menuLogic = new MenuLogic();
+    HeroActions heroActions = new HeroActions();
+    Hero hero;
+
+    public enum Weapon {SWORD}
 
     public void opening() {
         display.print(" \n I am G.E.M. You've probably never heard of me." +
@@ -36,7 +40,19 @@ public class Menus {
                 "\n    Take something useful. If you don't know why you need it, you're in the wrong place already." +
                 "\n \n             [[SWORD, SHIELD, BARRIER, RIFLE, SIDEARM]]");
 
+        HeroActions.Weapon weaponName = HeroActions.Weapon.valueOf(userInput.prompt().toUpperCase());
+        heroActions.weaponSwitch(weaponName);
+        theExposition();
 
+    }
+
+    public void theExposition(){
+        display.print("Alright. This will have to do for the moment. I want you to listen---well, read---very carefully." +
+                "\n You are a long way from anything which wants to survive. We knew the first wave would go badly but..." +
+                "\n Honestly, even my predictions could not have accounted for all that has happened." +
+                "\n Your first objective is clear: Get out of this bunker. I will maintain contact and feed you as much information as I can." +
+                "\n If you encounter an angel, " + hero.heroList.get(0).getHeroName() + ", you are to run. Not fight, run." +
+                "\n You won't get far, but it is the more productive brand of futility. Now go.");
     }
 
 }
