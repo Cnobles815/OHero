@@ -9,7 +9,7 @@ public class MenuLogic {
     static Hero hero;
     HeroHolder heroHolder = new HeroHolder();
 
-    public enum Name {SILVER, FOX, FAULT, BISHOP, RICOCHET, WALLY, DELGADO, SIREN, ZOMBIE, BASILISK}
+    public enum Name {SILVER, FOX, FAULT, BISHOP, RICOCHET, WALLY, DELGADO, SIREN, ZOMBIE, BASILISK, }
 
     public static void nameSwitch(Name name) {
 
@@ -25,7 +25,7 @@ public class MenuLogic {
                 break;
 
             case FOX:
-                display.print("  Would have been best if at least some of you could stay out of this." +
+                display.print("  It may have been best if at least some of you could stay out of this." +
                         "\n   You're here now though. Start getting caught up.");
                 hero = new Hero("Fox", 2, 8, 10, 22, 22);
                 display.print("  HERO LEVEL:");

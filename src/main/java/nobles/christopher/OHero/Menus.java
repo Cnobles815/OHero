@@ -4,10 +4,10 @@ package nobles.christopher.OHero;
  * Created by christophernobles on 9/19/16.
  */
 public class Menus {
-    Display display = new Display();
-    UserInput userInput = new UserInput();
+    static Display display = new Display();
+    static UserInput userInput = new UserInput();
     MenuLogic menuLogic = new MenuLogic();
-    HeroActions heroActions = new HeroActions();
+    static HeroActions heroActions = new HeroActions();
     Hero hero;
 
     public enum Weapon {SWORD}
@@ -19,7 +19,8 @@ public class Menus {
                 "\n The vast majority of my sensors are down." +
                 "\n ...that said, you look like too little too late, to me." +
                 "\n But what good has reserve, at the end of things?" +
-                "\n Introduce yourself. Let's begin.");
+                "\n Introduce yourself. Let's begin." +
+                "\n     [[ENTER HERO NAME: Silver, Basilisk, Siren, Wally, Ricochet, Fox, Zombie, Delgado, Fault, Bishop]]");
         namePrompt();
         MenuLogic.Name heroName = MenuLogic.Name.valueOf(userInput.prompt().toUpperCase());
         //display.print("So your name is " + heroName + " ?");
@@ -53,6 +54,21 @@ public class Menus {
                 "\n Your first objective is clear: Get out of this bunker. I will maintain contact and feed you as much information as I can." +
                 "\n If you encounter an angel, " + hero.heroList.get(0).getHeroName() + ", you are to run. Not fight, run." +
                 "\n You won't get far, but it is the more productive brand of futility. Now go.");
+        nowGo();
+
+    }
+
+    public static  void nowGo(){
+        display.print(" \n\n\n   [[CHAPTER 1: \"Now go.\"]]    ");
+        display.print("OPTIONS" +
+                "\n1. Explore Room" +
+                "\n2. Exit Room" +
+                "\n3. Open Terminal [G.E.M]" +
+                "\n4. Check Stats");
+        int choice = userInput.promptInt();
+        heroActions.nowGoSwitch(choice);
+
+
     }
 
 }

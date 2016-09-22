@@ -5,20 +5,21 @@ package nobles.christopher.OHero;
  */
 public  class Display {
 
-    public void print(String output) {
+    public  void print(String output) {
         System.out.println(output);
 
     }
 
-    public void printInt(int output) {
+    public  void printInt(int output) {
         System.out.println(output);
     }
 
-    public void printInt(Integer output) {
+    public  void printInt(Integer output) {
         System.out.println(output);
     }
 
-    public void printHero(Hero output) {
+    public  void printHero(Hero output) {
         System.out.println();
     }
+
 }
