@@ -92,11 +92,11 @@ public class HeroActions {
         switch (choice) {
             case 1:
                 display.print("EXPLORE" +
-                        "--The room is mostly dark. The sharp glow of flickering flat screen monitors provides the only illumination." +
-                        "\n Harsh shadows are cast throughout the room, shifting whe a display changes or displays text from your mostly silent guide." +
+                        "--A staging area. Sealed lockers line the walls of the room, unbroken aside from the monitor from which 'Gem' speaks." +
+                        "\n Brightly lit, but mostly barren, a green flashing light beside the heavy hatch door on one end of the room seems the only way out." +
                         "\n A constant low, nearly sub-bass thrum hums in the air. Occasionally, a trembling thump which can be felt through the walls and floor ripples through." +
-                        "\n By any reasonable guess, you are far below ground---and high above, there is a pitched battle of some sort." +
-                        "\n In your exploration of the room, you locate an armband which integrates easily into your gear, providing a weak shield.--");
+                        "\n By any reasonable guess, you are far below ground---or aboard something very, very large." +
+                        "\n In your exploration of the room, you locate an armband which someone else seems to have left behind. It fits well with your gear, and provides a weak protective shield.--");
                 if (x <= 0) {
                     hero.heroList.get(0).heroHpUp(4);
                     display.print("   [[LEVEL UP!]]");
@@ -121,16 +121,18 @@ public class HeroActions {
                 Menus.goWhere();
                 break;
             case 3:
-                display.print("So you want to know more about what is going on. I can respect that." +
+                display.print("So you want to know more. I can respect that." +
                         "\n I'll never respect YOU, " + hero.heroList.get(0).getHeroName() + ", but I can respect the curiosity." +
                         "\n" +
                         "\n" +
-                        "To be honest with you, I do not know. I know that you should not be here. I know that approximately two point seven trillion program alarms have been tripped in the past twenty four hours." +
-                        "\n Orbital sensors. Atmospheric overpressure alerts. Connectivity severances spanning the entire easter seaboard of Asia." +
-                        "\n Grenwich is dark. ISS is dark. Scattered reports of something in the skies above New York City." +
-                        "\n Scattered reports of armed, powerful resistance. Human resistance. I suppose that is you, isn't it?" +
-                        "\n I do not know how you got down here. That is your story to tell. What I can tell you is that, as things stand now, your presence here confirms my most pessimistic projections;" +
-                        "\n We are losing. Badly. And no one knows just what is going on. Go find out. I will be with you." +
+                        "You are here because someone gave you the absurd idea that you could be a 'hero' at some point in your life." +
+                        "\n To reach this room, you have at very least proven that stairs and toasters aren't quite enough to rid the world of your presence." +
+                        "\n You also may or may not have spoken the word 'righteous' at least once in your life, unironically." +
+                        "\n Hero meant something, once upon a time. Now it means you have participated in the rigorous training of this academy, and your reward is obligation." +
+                        "\n Peace mostly thrives. But there will always be threats to that peace. An age of vast properity means that those threats are often very well equipped and enabled." +
+                        "\n Stop them. But first, get out of this training arena alive." +
+                        "\n I won't be disappointed if you do not. You have no idea just how low my expectations are." +
+                        "\n You know enough to complete your task." +
                         "\n Now go.");
                 display.print("--You learned a bit about the situation. Knowledge is power.--");
                 hero.heroList.get(0).heroWpUp(2);
@@ -157,7 +159,7 @@ public class HeroActions {
 
                 break;
             default:
-                display.print("Your indecision will get us both killed. Decide.");
+                display.print("Your cringeworthy penchant for indecision is beginning to get on my nerves. Choose.");
                 Menus.nowGo();
                 break;
 
@@ -180,7 +182,7 @@ public class HeroActions {
                 Menus.goWhere();
                 break;
             default:
-                display.print("You did nothing. The world explodes and everyone dies.");
+                display.print("You did nothing. The world is in terrible hands, 'hero'.");
                 break;
         }
     }

@@ -48,12 +48,12 @@ public class Menus {
     }
 
     public void theExposition() {
-        display.print("Alright. This will have to do for the moment. I want you to listen---well, read---very carefully." +
-                "\n You are a long way from anything which wants to survive. We knew the first wave would go badly but..." +
-                "\n Honestly, even my predictions could not have accounted for all that has happened." +
-                "\n Your first objective is clear: Get out of this bunker. I will maintain contact and feed you as much information as I can." +
-                "\n If you encounter an angel, " + hero.heroList.get(0).getHeroName() + ", you are to run. Not fight, run." +
-                "\n You won't get far, but it is the more productive brand of futility. Now go.");
+        display.print("Alright. This will have to do for the moment. I want you to listen very carefully." +
+                "\n The enemies between you and the exit are designed to scale in difficulty depending upon the 'hero' facing them." +
+                "\n The scale is best appreciated as 'just enough to kill them'. So, take that as you will. Whatever you do best probably will not be sufficient here." +
+                "\n Your first objective is clear: Get out of this room. I will maintain contact and feed you as much information as I can." +
+                "\n And oh, " + hero.heroList.get(0).getHeroName() + ". [snarky comment here]" +
+                "\n You won't get far, but perserverence is the more productive brand of futility. Now go.");
         nowGo();
 
     }
