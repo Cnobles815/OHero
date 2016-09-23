@@ -8,12 +8,13 @@ public class HeroActions {
     //Menus menu;
     Display display = new Display();
 
+    public enum Weapon {SWORD, SHIELD, BARRIER, RIFLE, SIDEARM, SHOTGUN, FOCUS}
     public void weaponSwitch(Weapon weapon) {
 
         switch (weapon) {
             case SWORD:
-                display.print("More than a relic. With what this thing has seen, I'd be more worried about its previous owner." +
-                        "\n If she comes to get it, she won't be happy to see you holding it.");
+                display.print("More than a relic. With what this thing has seen, I would be more worried about its previous owner." +
+                        "\n If she comes to get it, she will not be happy to see you holding it.");
                 hero.heroList.get(0).heroStrUp(2);
                 hero.heroList.get(0).heroSpdUp(5);
                 hero.heroList.get(0).heroEnUp(5);
@@ -23,7 +24,7 @@ public class HeroActions {
                 break;
 
             case SHIELD:
-                display.print("As long as they're more dead than you are, right?");
+                display.print("The oldest race in humanity's history. Just so you are aware, sword has always won.");
                 hero.heroList.get(0).heroHpUp(14);
                 hero.heroList.get(0).heroSpdUp(-4);
                 hero.heroList.get(0).heroStrUp(3);
@@ -33,7 +34,7 @@ public class HeroActions {
                 break;
 
             case BARRIER:
-                display.print("Just one more volley.");
+                display.print("By will alone, pardon yourself from harm.");
                 hero.heroList.get(0).heroEnUp(-15);
                 hero.heroList.get(0).heroHpUp(20);
                 hero.heroList.get(0).heroSpdUp(10);
@@ -52,6 +53,25 @@ public class HeroActions {
                 display.print("    [[LEVEL UP!]]    ");
                 display.printInt(hero.heroList.get(0).heroLevel());
                 break;
+
+            case SHOTGUN:
+                display.print("Instantaneous conflict resolution..." +
+                        "\n Now that's magic.");
+                hero.heroList.get(0).heroWpUp(40);
+                hero.heroList.get(0).heroHpUp(-10);
+                hero.heroList.get(0).heroEnUp(-10);
+                display.print("     [[LEVEL UP!]]    ");
+                display.printInt(hero.heroList.get(0).heroLevel());
+                break;
+
+            case FOCUS:
+                display.print("Projection of power has always been more important than volume.");
+                hero.heroList.get(0).heroWpUp(15);
+                hero.heroList.get(0).heroEnUp(15);
+                hero.heroList.get(0).heroHpUp(-5);
+                hero.heroList.get(0).heroStrUp(-5);
+                display.print("     [[LEVEL UP!]]     ");
+                display.printInt(hero.heroList.get(0).heroLevel());
 
             case SIDEARM:
                 display.print("Reflex shot. Fortune favors the first.");
@@ -88,15 +108,17 @@ public class HeroActions {
                 break;
             case 2:
                 display.print("--The door is stuck. Door opening requires 10 Strength or 10 Willpower (or 2 turns if lower than 10)--");
-                display.print("Your Strength is:");
+                display.print(hero.heroList.get(0).getHeroName() + "'s Strength is:");
                 display.printInt(hero.heroList.get(0).getHeroStr());
-                display.print("Your Willpower is:");
+                display.print(hero.heroList.get(0).getHeroName() + "'s Willpower is:");
                 display.printInt(hero.heroList.get(0).getHeroWp());
                 if (hero.heroList.get(0).getHeroStr() < 10 && hero.heroList.get(0).getHeroWp() < 10)
                     display.print("--You pushed again. The door glides open silently---but a shadow sweeps by the opening, moving to your right.--");
                 else
                     display.print("--The door opens with a bit more strength, gliding open silently. Despite appearing empty, the facility is well kept.--" +
-                            "\n Immediately upon opening the door TO BE CONTINUED");
+                            "\n Beyond the door, the hall is dimly lit. The lights above are evenly spaced, providing cool blue-white illumniation---just not very much of it." +
+                            "\n The air is crisp, cool. Certainly being cycled through a system frequently, a constant draft pushes from the right. Well cooled, very quiet.");
+                Menus.goWhere();
                 break;
             case 3:
                 display.print("So you want to know more about what is going on. I can respect that." +
@@ -142,6 +164,26 @@ public class HeroActions {
         }
     }
 
-    public enum Weapon {SWORD, SHIELD, BARRIER, RIFLE, SIDEARM}
+    public void goWhereSwitch(int choice) {
+        switch (choice) {
+            case 1:
+                display.print("GO RIGHT");
+                break;
+            case 2:
+                display.print("GO LEFT");
+                break;
+            case 3:
+                display.print("YELL");
+                break;
+            case 4:
+                display.print("BE AN IDIOT");
+                Menus.goWhere();
+                break;
+            default:
+                display.print("You did nothing. The world explodes and everyone dies.");
+                break;
+        }
+    }
+
 }
 

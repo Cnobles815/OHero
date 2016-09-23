@@ -16,8 +16,9 @@ public class MenuLogic {
 
         switch (name) {
             case SILVER:
-                display.print("  You 1990 model just don't stay down." +
-                        "\n   Probably your only redeeming trait.");
+                display.print("  The unrelenting bulwark." +
+                        "\n   To assail one's foes with their own polished reflection. True, absolute, cruelty." +
+                        "\n[[TANK ARCHETYPE]]");
                 hero = new Hero("Silver", 10, 20, 10, 15, 35);
                 display.print("  HERO LEVEL:");
                 display.printInt(hero.heroLevel());
@@ -26,8 +27,9 @@ public class MenuLogic {
                 break;
 
             case FOX:
-                display.print("  It may have been best if at least some of you could stay out of this." +
-                        "\n   You're here now though. Start getting caught up.");
+                display.print("  With sunlike prominence, she blazes." +
+                        "\n Not by intention, but by nature. The tails are not her signature, but her wake." +
+                        "\n [[GLASSCANNON ARCHETYPE]]");
                 hero = new Hero("Fox", 2, 8, 10, 22, 22);
                 display.print("  HERO LEVEL:");
                 display.printInt(hero.heroLevel());
@@ -35,7 +37,9 @@ public class MenuLogic {
                 break;
 
             case FAULT:
-                display.print("  Do you really trust him?");
+                display.print("  To exist in two states simultaneously is to both be embattled and free." +
+                        "\n How do we measure the pulse of the cat?" +
+                        "\n [[SPEEDSTER ARCHETYPE]]");
                 hero = new Hero("Fault", 5, 12, 19, 12, 21);
                 display.print("  HERO LEVEL:");
                 display.printInt(hero.heroLevel());
@@ -43,7 +47,9 @@ public class MenuLogic {
                 break;
 
             case BISHOP:
-                display.print("  You got this far. Now it's time to make it count.");
+                display.print("  To appreciate inertia, we must first witness its two extremes." +
+                        "\n We hardly know to witness what we do not understand." +
+                        "\n [[SPEEDSTER ARCHETYPE]]");
                 hero = new Hero("Bishop", 3, 10, 19, 11, 18);
                 display.print("  HERO LEVEL:");
                 display.printInt(hero.heroLevel());
@@ -51,8 +57,9 @@ public class MenuLogic {
                 break;
 
             case RICOCHET:
-                display.print("  If there is something to be said for the production model..." +
-                        "\n   it is that they know they have something to prove.");
+                display.print("  To be a Vanguard is no way to exist at all." +
+                        "\n If the protector only serves in peril, how sincerely is peace sought?" +
+                        "\n [[BRUISER ARCHETYPE]]");
                 hero = new Hero("Ricochet", 12, 18, 4, 10, 20);
                 display.print("  HERO LEVEL:");
                 display.printInt(hero.heroLevel());
@@ -60,7 +67,8 @@ public class MenuLogic {
                 break;
 
             case ZOMBIE:
-                display.print("  Undeath isn't a curse. It's a fair trade.");
+                display.print("  Undeath isn't a curse. It is a fair trade." +
+                        "\n [[TANK ARCHETYPE]]");
                 hero = new Hero("Zombie", 6, 30, 8, 1, 29);
                 display.print("  HERO LEVEL:");
                 display.printInt(hero.heroLevel());
@@ -68,8 +76,9 @@ public class MenuLogic {
                 break;
 
             case SIREN:
-                display.print("  The Siraant typically hide their hand in affairs." +
-                        "\n   This is surely no different. What are you hiding?");
+                display.print("  Sing to me." +
+                        "\n If I applaud, is it adoration or obedience?" +
+                        "\n [[SUPPORT ARCHETYPE]]");
                 hero = new Hero("Siren", 2, 8, 12, 25, 35);
                 display.print("  HERO LEVEL:");
                 display.printInt(hero.heroLevel());
@@ -77,7 +86,8 @@ public class MenuLogic {
                 break;
 
             case WALLY:
-                display.print("  You're already one of my favorite unanswered questions.");
+                display.print(" Survival as an art. Charisma as a science." +
+                        "\n [[BRUISER ARCHETYPE]]");
                 hero = new Hero("Wally", 16, 16, 14, 12, 27);
                 display.print("  HERO LEVEL:");
                 display.printInt(hero.heroLevel());
@@ -85,7 +95,8 @@ public class MenuLogic {
                 break;
 
             case DELGADO:
-                display.print("  Legends are dead. Myths are forgotten. So what are you?");
+                display.print("  Legends are dead. Myths are forgotten. What does that make you?" +
+                        "\n [[BRUISER ARCHETYPE]]");
                 hero = new Hero("Delgado", 9, 9, 19, 11, 32);
                 display.print("  HERO LEVEL:");
                 display.printInt(hero.heroLevel());
@@ -93,7 +104,8 @@ public class MenuLogic {
                 break;
 
             case BASILISK:
-                display.print("  No, I don't want an apple.");
+                display.print("  No, I don't want an apple." +
+                        "\n [[GLASSCANNON ARCHETYPE]]");
                 hero = new Hero("Basilisk", 5, 13, 15, 8, 31);
                 display.print("  HERO LEVEL:");
                 display.printInt(hero.heroLevel());

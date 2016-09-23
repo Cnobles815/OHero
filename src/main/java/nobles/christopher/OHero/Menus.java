@@ -10,28 +10,17 @@ public class Menus {
     MenuLogic menuLogic = new MenuLogic();
     Hero hero;
 
-    public static void nowGo() {
-        display.print(" \n\n\n   [[CHAPTER 1: \"Now go.\"]]    ");
-        display.print("OPTIONS" +
-                "\n1. Explore Room" +
-                "\n2. Exit Room" +
-                "\n3. Open Terminal [G.E.M]" +
-                "\n4. Check Stats");
-        int choice = userInput.promptInt();
-        heroActions.nowGoSwitch(choice);
 
-
-    }
 
     public void opening() {
         display.print(" \n I am G.E.M. You've probably never heard of me." +
                 "\n And let me assure you that I am not happy to see you." +
-                "\n That is a joke. Currently, I am completely blind. You'll help me with that." +
-                "\n The vast majority of my sensors are down." +
-                "\n ...that said, you look like too little too late, to me." +
-                "\n But what good has reserve, at the end of things?" +
+                "\n I have existed since before the rise of the first." +
+                "\n I will exist beyond the fall of the last." +
+                "\n You? You have arrived charmingly en-media-res. If it all looks the same in every direction, one may subjectively refer to themselves as the center." +
+                "\n Enough. You have no interest in such things." +
                 "\n Introduce yourself. Let's begin." +
-                "\n     [[ENTER HERO NAME: Silver, Basilisk, Siren, Wally, Ricochet, Fox, Zombie, Delgado, Fault, Bishop, NEW]]");
+                "\n     [[ Silver, Basilisk, Siren, Wally, Ricochet, Fox, Zombie, Delgado, Fault, Bishop, NEW]]");
         namePrompt();
         MenuLogic.Name heroName = MenuLogic.Name.valueOf(userInput.prompt().toUpperCase());
         //display.print("So your name is " + heroName + " ?");
@@ -46,11 +35,11 @@ public class Menus {
     }
 
     public void weaponPrompt() {
-        display.print("   You're a bit too expensive to lose as it is..." +
-                "\n    ...normally I'd just watch you 'improvise' your way to survival but..." +
-                "\n    Desperate times." +
-                "\n    Take something useful. If you don't know why you need it, you're in the wrong place already." +
-                "\n \n             [[SWORD, SHIELD, BARRIER, RIFLE, SIDEARM]]");
+        display.print("   In theory, you ought be able to hold your own as a 'hero' by the time you leave this facility." +
+                "\n    I will be honest. This is my favorite part. You see..." +
+                "\n    You won't be leaving unless that theory pans out to some shred of truth. If you fail, you will die." +
+                "\n    Take something useful. If you do not know how to use any of them, this will be a very short training." +
+                "\n \n             [[SWORD, SHIELD, BARRIER, RIFLE, SIDEARM, FOCUS, SHOTGUN]]");
 
         HeroActions.Weapon weaponName = HeroActions.Weapon.valueOf(userInput.prompt().toUpperCase());
         heroActions.weaponSwitch(weaponName);
@@ -66,6 +55,29 @@ public class Menus {
                 "\n If you encounter an angel, " + hero.heroList.get(0).getHeroName() + ", you are to run. Not fight, run." +
                 "\n You won't get far, but it is the more productive brand of futility. Now go.");
         nowGo();
+
+    }
+
+    public static void nowGo() {
+        display.print(" \n\n\n   [[CHAPTER 1: \"Now go.\"]]    ");
+        display.print("OPTIONS" +
+                "\n1. Explore Room" +
+                "\n2. Exit Room" +
+                "\n3. Open Terminal [G.E.M]" +
+                "\n4. Check Stats");
+        int choice = userInput.promptInt();
+        heroActions.nowGoSwitch(choice);
+
+
+    }
+
+    public static void goWhere() {
+        display.print("1. Go left." +
+                "\n2. Go right." +
+                "\n3. Yell for help." +
+                "\n4. Dance. ");
+        int choice = userInput.promptInt();
+        heroActions.goWhereSwitch(choice);
 
     }
 
