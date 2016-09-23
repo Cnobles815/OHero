@@ -7,7 +7,6 @@ public  class Display {
 
     public  void print(String output) {
         System.out.println(output);
-
     }
 
     public  void printInt(int output) {

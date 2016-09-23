@@ -8,10 +8,11 @@ public class MenuLogic {
     static Display display = new Display();
     static Hero hero;
     HeroHolder heroHolder = new HeroHolder();
-
-    public enum Name {SILVER, FOX, FAULT, BISHOP, RICOCHET, WALLY, DELGADO, SIREN, ZOMBIE, BASILISK, }
+    static UserInput userInput = new UserInput();
 
     public static void nameSwitch(Name name) {
+
+        String newName;
 
         switch (name) {
             case SILVER:
@@ -87,7 +88,7 @@ public class MenuLogic {
                 display.print("  Legends are dead. Myths are forgotten. So what are you?");
                 hero = new Hero("Delgado", 9, 9, 19, 11, 32);
                 display.print("  HERO LEVEL:");
-                display.printInt( hero.heroLevel());
+                display.printInt(hero.heroLevel());
                 hero.addHero(hero);
                 break;
 
@@ -99,20 +100,26 @@ public class MenuLogic {
                 hero.addHero(hero);
                 break;
 
-            default:
-                display.print("  I'm here to teach, not judge. Suit up.");
-                hero = new Hero();
-                display.print("  HERO LEVEL:");
+            case NEW:
+                display.print("I do not think we've met before. Interesting.");
+                display.print("What do you call yourself?" +
+                        "\n    [[ENTER NAME]]");
+                newName = userInput.prompt();
+                hero = new Hero(newName, 8, 8, 8, 8, 5);
+                display.print(" HERO LEVEL:");
                 display.printInt(hero.heroLevel());
                 hero.addHero(hero);
 
-
-
+//            default:
+//                display.print("  I'm here to teach, not judge. Suit up.");
+//                hero = new Hero();
+//                display.print("  HERO LEVEL:");
+//                display.printInt(hero.heroLevel());
+//                hero.addHero(hero);
         }
     }
 
-    public void getHero(){
+    public enum Name {SILVER, FOX, FAULT, BISHOP, RICOCHET, WALLY, DELGADO, SIREN, ZOMBIE, BASILISK, NEW}
 
-    }
 }
 

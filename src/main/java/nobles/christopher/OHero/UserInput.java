@@ -1,4 +1,5 @@
 package nobles.christopher.OHero;
+
 import java.util.Scanner;
 
 /**
@@ -8,7 +9,7 @@ public class UserInput {
     Scanner userInput1 = new Scanner(System.in);
     MenuLogic menuLogic = new MenuLogic();
 
-    public String prompt(){
+    public String prompt() {
         String output = userInput1.next();
         return output;
     }
@@ -28,8 +29,6 @@ public class UserInput {
         MenuLogic.Name output = MenuLogic.Name.valueOf(userInput1.next().toUpperCase());
         return output;
     }
-
-
 
 
 }

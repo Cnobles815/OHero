@@ -81,7 +81,6 @@ public class Hero {
     public void setHeroWp(int change) {this.heroWp = change; }
 
     public int heroLevel() {
-
         int level = this.getHeroEn() + this.getHeroSpd() + this.getHeroHp() + this.getHeroStr() + this.getHeroWp();
 
         return level;
