@@ -107,7 +107,7 @@ public class HeroActions {
                 Menus.nowGo();
                 break;
             case 2:
-                display.print("--The door is stuck. Door opening requires 10 Strength or 10 Willpower (or 2 turns if lower than 10)--");
+                display.print("--The door is stuck. Door opening requires 10 Strength or 10 Willpower--");
                 display.print(hero.heroList.get(0).getHeroName() + "'s Strength is:");
                 display.printInt(hero.heroList.get(0).getHeroStr());
                 display.print(hero.heroList.get(0).getHeroName() + "'s Willpower is:");

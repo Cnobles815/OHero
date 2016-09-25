@@ -13,14 +13,14 @@ public class Menus {
 
 
     public void opening() {
-        display.print(" \n I am G.E.M. You've probably never heard of me." +
-                "\n And let me assure you that I am not happy to see you." +
-                "\n I have existed since before the rise of the first." +
-                "\n I will exist beyond the fall of the last." +
-                "\n You? You have arrived charmingly en-media-res. If it all looks the same in every direction, one may subjectively refer to themselves as the center." +
-                "\n Enough. You have no interest in such things." +
+        display.print(" \n I am G.E.M. You've probably never heard of me..." +
+                "\n                       ...and while I likely know more than anyone would care to about you, do not allow that to abuse your sense of insignificance." +
+                "\n \n   I have existed since before the rise of the first." +
+                "\n \n   I will exist beyond the fall of the last." +
+                "\n\n You? You have arrived charmingly in media res. If it all looks the same in every direction, one may subjectively refer to themselves as the center." +
+                "\n That also means that while you are not necessarily late, you clearly are not early either." +
                 "\n Introduce yourself. Let's begin." +
-                "\n     [[ Silver, Basilisk, Siren, Wally, Ricochet, Fox, Zombie, Delgado, Fault, Bishop, NEW]]");
+                "\n\n\n     [[ Silver, Basilisk, Siren, Wally, Ricochet, Fox, Zombie, Delgado, Fault, Bishop, NEW]]");
         namePrompt();
         MenuLogic.Name heroName = MenuLogic.Name.valueOf(userInput.prompt().toUpperCase());
         //display.print("So your name is " + heroName + " ?");
@@ -31,7 +31,7 @@ public class Menus {
     }
 
     public void namePrompt() {
-        display.print("                  [[CHOOSE HERO OR SELECT NEW]]");
+        display.print("                        [[CHOOSE HERO OR SELECT NEW]]");
     }
 
     public void weaponPrompt() {

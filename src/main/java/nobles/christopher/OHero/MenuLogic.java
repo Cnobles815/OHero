@@ -20,7 +20,7 @@ public class MenuLogic {
                         "\n   To assail one's foes with their own polished reflection. True, absolute, cruelty." +
                         "\n[[TANK ARCHETYPE]]");
                 hero = new Hero("Silver", 10, 20, 10, 15, 35);
-                display.print("  HERO LEVEL:");
+                display.print(hero.getHeroName() + "'s HERO LEVEL:");
                 display.printInt(hero.heroLevel());
                 hero.addHero(hero);
                 //System.out.println(hero.heroList.get(0));
@@ -31,7 +31,7 @@ public class MenuLogic {
                         "\n Not by intention, but by nature. The tails are not her signature, but her wake." +
                         "\n [[GLASSCANNON ARCHETYPE]]");
                 hero = new Hero("Fox", 2, 8, 10, 22, 22);
-                display.print("  HERO LEVEL:");
+                display.print(hero.getHeroName() + "'s HERO LEVEL:");
                 display.printInt(hero.heroLevel());
                 hero.addHero(hero);
                 break;
@@ -41,7 +41,7 @@ public class MenuLogic {
                         "\n How do we measure the pulse of the cat?" +
                         "\n [[SPEEDSTER ARCHETYPE]]");
                 hero = new Hero("Fault", 5, 12, 19, 12, 21);
-                display.print("  HERO LEVEL:");
+                display.print(hero.getHeroName() + "'s HERO LEVEL:");
                 display.printInt(hero.heroLevel());
                 hero.addHero(hero);
                 break;
@@ -51,7 +51,7 @@ public class MenuLogic {
                         "\n We hardly know to witness what we do not understand." +
                         "\n [[SPEEDSTER ARCHETYPE]]");
                 hero = new Hero("Bishop", 3, 10, 19, 11, 18);
-                display.print("  HERO LEVEL:");
+                display.print(hero.getHeroName() + "'s HERO LEVEL:");
                 display.printInt(hero.heroLevel());
                 hero.addHero(hero);
                 break;
@@ -61,7 +61,7 @@ public class MenuLogic {
                         "\n If the protector only serves in peril, how sincerely is peace sought?" +
                         "\n [[BRUISER ARCHETYPE]]");
                 hero = new Hero("Ricochet", 12, 18, 4, 10, 20);
-                display.print("  HERO LEVEL:");
+                display.print(hero.getHeroName() + "'s HERO LEVEL:");
                 display.printInt(hero.heroLevel());
                 hero.addHero(hero);
                 break;
@@ -70,7 +70,7 @@ public class MenuLogic {
                 display.print("  Undeath isn't a curse. It is a fair trade." +
                         "\n [[TANK ARCHETYPE]]");
                 hero = new Hero("Zombie", 6, 30, 8, 1, 29);
-                display.print("  HERO LEVEL:");
+                display.print(hero.getHeroName() + "'s HERO LEVEL:");
                 display.printInt(hero.heroLevel());
                 hero.addHero(hero);
                 break;
@@ -80,7 +80,7 @@ public class MenuLogic {
                         "\n If I applaud, is it adoration or obedience?" +
                         "\n [[SUPPORT ARCHETYPE]]");
                 hero = new Hero("Siren", 2, 8, 12, 25, 35);
-                display.print("  HERO LEVEL:");
+                display.print(hero.getHeroName() + "'s HERO LEVEL:");
                 display.printInt(hero.heroLevel());
                 hero.addHero(hero);
                 break;
@@ -89,7 +89,7 @@ public class MenuLogic {
                 display.print(" Survival as an art. Charisma as a science." +
                         "\n [[BRUISER ARCHETYPE]]");
                 hero = new Hero("Wally", 16, 16, 14, 12, 27);
-                display.print("  HERO LEVEL:");
+                display.print(hero.getHeroName() + "'s HERO LEVEL:");
                 display.printInt(hero.heroLevel());
                 hero.addHero(hero);
                 break;
@@ -98,7 +98,7 @@ public class MenuLogic {
                 display.print("  Legends are dead. Myths are forgotten. What does that make you?" +
                         "\n [[BRUISER ARCHETYPE]]");
                 hero = new Hero("Delgado", 9, 9, 19, 11, 32);
-                display.print("  HERO LEVEL:");
+                display.print(hero.getHeroName() + "'s HERO LEVEL:");
                 display.printInt(hero.heroLevel());
                 hero.addHero(hero);
                 break;
@@ -107,18 +107,18 @@ public class MenuLogic {
                 display.print("  No, I don't want an apple." +
                         "\n [[GLASSCANNON ARCHETYPE]]");
                 hero = new Hero("Basilisk", 5, 13, 15, 8, 31);
-                display.print("  HERO LEVEL:");
+                display.print(hero.getHeroName() + "'s HERO LEVEL:");
                 display.printInt(hero.heroLevel());
                 hero.addHero(hero);
                 break;
 
             case NEW:
-                display.print("I do not think we've met before. Interesting.");
-                display.print("What do you call yourself?" +
-                        "\n    [[ENTER NAME]]");
+                display.print("\n  I do not think we've met before. Interesting.");
+                display.print("  What do you call yourself?" +
+                        "\n                       [[ENTER NAME]]");
                 newName = userInput.prompt();
                 hero = new Hero(newName, 8, 8, 8, 8, 5);
-                display.print(" HERO LEVEL:");
+                display.print(hero.getHeroName() + "'s HERO LEVEL:");
                 display.printInt(hero.heroLevel());
                 hero.addHero(hero);
 
