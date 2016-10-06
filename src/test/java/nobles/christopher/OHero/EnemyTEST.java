@@ -18,6 +18,14 @@ public class EnemyTEST {
     }
 
     @Test
+    public void getEnemyNameTEST(){
+        Enemy enemy  = new Enemy("Bob", 5, 5, 5, 5);
+        String expectedValue = "Bob";
+        String actualValue = enemy.getEnemyName();
+        assertEquals("The name should be Bob" , expectedValue , actualValue);
+    }
+
+    @Test
     public void getEnemyHPTEST(){
         Enemy enemy = new Enemy("Bob", 5, 6, 5, 5);
         int expectedValue = 6;

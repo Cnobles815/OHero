@@ -18,6 +18,14 @@ public class HeroTEST {
     }
 
     @Test
+    public void getHeroNameTEST(){
+        Hero hero  = new Hero("Bob", 4, 4, 4, 4, 4);
+        String expectedValue = "Bob";
+        String actualValue = hero.getHeroName();
+        assertEquals("The value should be Bob" , expectedValue , actualValue);
+    }
+
+    @Test
     public void getHeroHPTEST(){
         Hero hero = new Hero("Bob", 4, 5, 4, 4, 4);
         int expectedValue = 5;
