@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Created by christophernobles on 9/19/16.
  */
 public class UserInput {
-    Scanner userInput1 = new Scanner(System.in);
+    static Scanner  userInput1 = new Scanner(System.in);
     MenuLogic menuLogic = new MenuLogic();
 
     public String prompt() {
@@ -24,7 +24,7 @@ public class UserInput {
         return output;
     }
 
-    public MenuLogic.Name promptName() {
+    public static MenuLogic.Name promptName() {
 
         MenuLogic.Name output = MenuLogic.Name.valueOf(userInput1.next().toUpperCase());
         return output;

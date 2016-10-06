@@ -42,6 +42,8 @@ public class Hero {
         int heroWp = 0;
     }
 
+
+
     public int getHeroStr(){
         return this.heroStr;
     }
@@ -93,6 +95,8 @@ public class Hero {
 
         return (levelUp);
     }
+
+
 
     public int heroEnUp(int amountIncrease) {
         int levelUp = getHeroEn() + amountIncrease;

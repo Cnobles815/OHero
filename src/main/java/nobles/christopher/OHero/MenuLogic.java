@@ -10,9 +10,18 @@ public class MenuLogic {
     HeroHolder heroHolder = new HeroHolder();
     static UserInput userInput = new UserInput();
 
-    public static void nameSwitch(Name name) {
+    public static void nameSwitch(Name name) throws IllegalArgumentException {
 
         String newName;
+
+//        if (name != ) {
+//            throw new IllegalArgumentException();
+//        }
+//
+//        catch (Exception exception ){
+//            display.print("INVALID ENTRY");
+//            Menus.opening();
+//        }
 
         switch (name) {
             case SILVER:

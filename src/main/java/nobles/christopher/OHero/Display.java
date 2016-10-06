@@ -18,7 +18,7 @@ public  class Display {
     }
 
     public  void printHero(Hero output) {
-        System.out.println();
+        System.out.println(output);
     }
 
 }

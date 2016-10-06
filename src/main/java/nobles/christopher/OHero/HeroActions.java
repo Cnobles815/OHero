@@ -19,7 +19,7 @@ public class HeroActions {
                 hero.heroList.get(0).heroSpdUp(5);
                 hero.heroList.get(0).heroEnUp(5);
                 hero.heroList.get(0).heroWpUp(8);
-                display.print("    [[LEVEL UP!]]    ");
+                display.print((char)27 + "[0;1m    [[LEVEL UP!]]    ");
                 display.printInt(hero.heroList.get(0).heroLevel());
                 break;
 
@@ -87,23 +87,25 @@ public class HeroActions {
     }
 
     public void nowGoSwitch(int choice) {
-        int x = -1;
-        x++;
+        int x = 0;
+        x += 1;
+
         switch (choice) {
             case 1:
+
                 display.print("EXPLORE" +
                         "--A staging area. Sealed lockers line the walls of the room, unbroken aside from the monitor from which 'Gem' speaks." +
                         "\n Brightly lit, but mostly barren, a green flashing light beside the heavy hatch door on one end of the room seems the only way out." +
                         "\n A constant low, nearly sub-bass thrum hums in the air. Occasionally, a trembling thump which can be felt through the walls and floor ripples through." +
                         "\n By any reasonable guess, you are far below ground---or aboard something very, very large." +
                         "\n In your exploration of the room, you locate an armband which someone else seems to have left behind. It fits well with your gear, and provides a weak protective shield.--");
-                if (x <= 0) {
+                if (x != 0) {
                     hero.heroList.get(0).heroHpUp(4);
                     display.print("   [[LEVEL UP!]]");
                     display.printInt(hero.heroList.get(0).heroLevel());
-                } else {
+                } else
                     display.print("There's nothing else to find. Nice try though.");
-                }
+
                 Menus.nowGo();
                 break;
             case 2:
