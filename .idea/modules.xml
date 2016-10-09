@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OHero.iml" filepath="$PROJECT_DIR$/OHero.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OHeroSpring/OHeroSpring.iml" filepath="$PROJECT_DIR$/OHeroSpring/OHeroSpring.iml" />
     </modules>
   </component>
 </project>

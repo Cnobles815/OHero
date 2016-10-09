@@ -23,10 +23,13 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="OHero" />
+        <module name="OHeroSpring" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="OHero" target="1.5" />
+      <module name="OHero" target="1.8" />
+      <module name="OHeroSpring" target="1.8" />
+      <module name="OHeroSPRING" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -130,9 +130,9 @@ public class HeroActions {
                         "You are here because someone gave you the absurd idea that you could be a 'hero' at some point in your life." +
                         "\n To reach this room, you have at very least proven that stairs and toasters aren't quite enough to rid the world of your presence." +
                         "\n You also may or may not have spoken the word 'righteous' at least once in your life, unironically." +
-                        "\n Hero meant something, once upon a time. Now it means you have participated in the rigorous training of this academy, and your reward is obligation." +
-                        "\n Peace mostly thrives. But there will always be threats to that peace. An age of vast properity means that those threats are often very well equipped and enabled." +
-                        "\n Stop them. But first, get out of this training arena alive." +
+                        "\n You're all 'heroes' in one way or another. The primary joy of my existence is in forcing you collectively to prove it." +
+                        //"\n Peace mostly thrives. But there will always be threats to that peace. An age of vast properity means that those threats are often very well equipped and enabled." +
+                        //"\n Stop them. But first, get out of this training arena alive." +
                         "\n I won't be disappointed if you do not. You have no idea just how low my expectations are." +
                         "\n You know enough to complete your task." +
                         "\n Now go.");
