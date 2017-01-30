@@ -4,6 +4,8 @@ import nobles.christopher.OHero.app.MenuLogic;
 import nobles.christopher.OHero.units.Hero;
 import nobles.christopher.OHero.units.HeroActions;
 
+import java.io.IOException;
+
 /**
  * Created by christophernobles on 9/19/16.
  */
@@ -45,7 +47,11 @@ public abstract class Menus {
         Display.print((char)27 +        "[0;1m\n \n             [[SWORD, SHIELD, BARRIER, RIFLE, SIDEARM, FOCUS, SHOTGUN]]");
 
         HeroActions.Weapon weaponName = HeroActions.Weapon.valueOf(UserInput.prompt().toUpperCase());
-        heroActions.weaponSwitch(weaponName);
+        try {
+            heroActions.weaponSwitch(weaponName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         theExposition();
 
     }

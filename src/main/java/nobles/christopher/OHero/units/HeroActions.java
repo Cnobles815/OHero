@@ -2,6 +2,9 @@ package nobles.christopher.OHero.units;
 
 import nobles.christopher.OHero.io.Display;
 import nobles.christopher.OHero.io.Menus;
+import nobles.christopher.OHero.io.Output;
+
+import java.io.IOException;
 
 /**
  * Created by christophernobles on 9/19/16.
@@ -10,7 +13,7 @@ public class HeroActions {
     Hero hero;
 
     public enum Weapon {SWORD, SHIELD, BARRIER, RIFLE, SIDEARM, SHOTGUN, FOCUS}
-    public void weaponSwitch(Weapon weapon) {
+    public void weaponSwitch(Weapon weapon) throws IOException {
 
         switch (weapon) {
             case SWORD:
@@ -22,6 +25,11 @@ public class HeroActions {
                 hero.heroList.get(0).heroWpUp(8);
                 Display.print((char)27 + "[0;1m    [[LEVEL UP!]]    ");
                 Display.printInt(hero.heroList.get(0).heroLevel());
+                try {
+                    Output.fileWrite((hero.heroList.get(0).heroLevel()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
 
             case SHIELD:
@@ -86,6 +94,8 @@ public class HeroActions {
         }
 
     }
+
+
 
     public void nowGoSwitch(int choice) {
         int x = 0;
