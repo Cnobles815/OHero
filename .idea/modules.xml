@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OHero.iml" filepath="$PROJECT_DIR$/OHero.iml" />
       <module fileurl="file://$PROJECT_DIR$/OHeroSpring/OHeroSpring.iml" filepath="$PROJECT_DIR$/OHeroSpring/OHeroSpring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OHeroSpring/ohero-spring.iml" filepath="$PROJECT_DIR$/OHeroSpring/ohero-spring.iml" />
     </modules>
   </component>
 </project>

@@ -1,4 +1,8 @@
-package nobles.christopher.OHero;
+package nobles.christopher.OHero.app;
+
+import nobles.christopher.OHero.io.Display;
+import nobles.christopher.OHero.units.Enemy;
+import nobles.christopher.OHero.units.Hero;
 
 /**
  * Created by christophernobles on 9/23/16.

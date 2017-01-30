@@ -1,4 +1,4 @@
-package nobles.christopher.OHero;
+package nobles.christopher.OHero.units;
 import java.util.ArrayList;
 
 /**
@@ -23,7 +23,7 @@ public class Enemy {
 
     public static ArrayList<Enemy> enemyList = new ArrayList<Enemy>();
 
-    static Enemy addEnemy(Enemy enemy){
+    public static Enemy addEnemy(Enemy enemy){
         enemyList.add(enemy);
         return enemy;
     }

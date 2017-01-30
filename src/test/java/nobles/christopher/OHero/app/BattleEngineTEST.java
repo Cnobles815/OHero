@@ -1,5 +1,7 @@
-package nobles.christopher.OHero;
+package nobles.christopher.OHero.app;
 
+import nobles.christopher.OHero.units.Enemy;
+import nobles.christopher.OHero.units.Hero;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

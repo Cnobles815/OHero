@@ -1,25 +1,27 @@
-package nobles.christopher.OHero;
+package nobles.christopher.OHero.io;
+
+import nobles.christopher.OHero.app.MenuLogic;
 
 import java.util.Scanner;
 
 /**
  * Created by christophernobles on 9/19/16.
  */
-public class UserInput {
+public abstract class UserInput {
     static Scanner  userInput1 = new Scanner(System.in);
     MenuLogic menuLogic = new MenuLogic();
 
-    public String prompt() {
+    public static String prompt() {
         String output = userInput1.next();
         return output;
     }
 
-    public int promptInt() {
+    public static int promptInt() {
         int output = userInput1.nextInt();
         return output;
     }
 
-    public double promptDouble() {
+    public static double promptDouble() {
         double output = userInput1.nextDouble();
         return output;
     }

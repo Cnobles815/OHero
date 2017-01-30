@@ -1,4 +1,4 @@
-package nobles.christopher.OHero;
+package nobles.christopher.OHero.units;
 
 import java.util.ArrayList;
 
@@ -16,7 +16,7 @@ public class Hero {
 
     public static ArrayList<Hero> heroList = new ArrayList<Hero>();
 
-   static Hero addHero(Hero hero){
+   public static Hero addHero(Hero hero){
         heroList.add(hero);
         return hero;
     }

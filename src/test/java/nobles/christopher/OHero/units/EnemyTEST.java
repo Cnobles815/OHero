@@ -1,4 +1,4 @@
-package nobles.christopher.OHero;
+package nobles.christopher.OHero.units;
 
 import org.junit.Test;
 
