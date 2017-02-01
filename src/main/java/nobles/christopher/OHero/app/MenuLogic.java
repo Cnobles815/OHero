@@ -16,15 +16,6 @@ public class MenuLogic {
 
         String newName;
 
-//        if (name != ) {
-//            throw new IllegalArgumentException();
-//        }
-//
-//        catch (Exception exception ){
-//            display.print("INVALID ENTRY");
-//            Menus.opening();
-//        }
-
         switch (name) {
             case SILVER:
                 Display.print("  The unrelenting bulwark." +
@@ -132,13 +123,6 @@ public class MenuLogic {
                 Display.print(hero.getHeroName() + "'s HERO LEVEL:");
                 Display.printInt(hero.heroLevel());
                 Hero.addHero(hero);
-
-//            default:
-//                display.print("  I'm here to teach, not judge. Suit up.");
-//                hero = new Hero();
-//                display.print("  HERO LEVEL:");
-//                display.printInt(hero.heroLevel());
-//                hero.addHero(hero);
         }
     }
 

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 /**
  * Created by christophernobles on 9/25/16.
  */
-public class Enemy {
+public class Enemy implements Comparable<Enemy> {
     int enemyStr = 0;
     int enemyWp = 0;
     int enemySpd = 0;
@@ -103,5 +103,10 @@ public class Enemy {
         setEnemyWp(levelUp);
 
         return levelUp;
+    }
+
+    @Override
+    public int compareTo(Enemy o) {
+        return 0;
     }
 }

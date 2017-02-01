@@ -14,13 +14,13 @@ public class BattleEngineTEST {
     public void strClashTEST(){
         Enemy enemy  = new Enemy("Jim", 5, 6, 6, 6);
         Hero hero = new Hero("Jane", 12, 9, 9, 9, 9);
-        BattleEngine battleTest = new BattleEngine();
+        BattleEngine strClashTest = new BattleEngine();
 
         hero.addHero(hero);
         enemy.addEnemy(enemy);
 
         int expectedValue = 7;
-        int actualValue = battleTest.strClash();
+        int actualValue = strClashTest.strClash();
         assertEquals("The value should be 7" , expectedValue , actualValue);
     }
 
@@ -28,13 +28,13 @@ public class BattleEngineTEST {
     public void spdClashTEST(){
         Enemy enemy  = new Enemy("Jim", 6, 6, 5, 6);
         Hero hero = new Hero("Jane", 9, 9, 12, 9, 9);
-        BattleEngine battleTest = new BattleEngine();
+        BattleEngine spdClashTest = new BattleEngine();
 
         hero.addHero(hero);
         enemy.addEnemy(enemy);
 
         int expectedValue = 7;
-        int actualValue = battleTest.spdClash();
+        int actualValue = spdClashTest.spdClash();
         assertEquals("The value should be 7" , expectedValue , actualValue);
     }
 

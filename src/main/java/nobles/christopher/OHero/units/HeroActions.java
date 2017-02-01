@@ -40,6 +40,11 @@ public class HeroActions {
                 hero.heroList.get(0).heroWpUp(7);
                 Display.print("    [[LEVEL UP!]]    ");
                 Display.printInt(hero.heroList.get(0).heroLevel());
+                try {
+                    Output.fileWrite((hero.heroList.get(0).heroLevel()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
 
             case BARRIER:
@@ -50,6 +55,11 @@ public class HeroActions {
                 hero.heroList.get(0).heroWpUp(5);
                 Display.print("    [[LEVEL UP!]]    ");
                 Display.printInt(hero.heroList.get(0).heroLevel());
+                try {
+                    Output.fileWrite((hero.heroList.get(0).heroLevel()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
 
             case RIFLE:
@@ -61,6 +71,11 @@ public class HeroActions {
                 hero.heroList.get(0).heroEnUp(-5);
                 Display.print("    [[LEVEL UP!]]    ");
                 Display.printInt(hero.heroList.get(0).heroLevel());
+                try {
+                    Output.fileWrite((hero.heroList.get(0).heroLevel()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
 
             case SHOTGUN:
@@ -71,6 +86,11 @@ public class HeroActions {
                 hero.heroList.get(0).heroEnUp(-10);
                 Display.print("     [[LEVEL UP!]]    ");
                 Display.printInt(hero.heroList.get(0).heroLevel());
+                try {
+                    Output.fileWrite((hero.heroList.get(0).heroLevel()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
 
             case FOCUS:
@@ -81,6 +101,12 @@ public class HeroActions {
                 hero.heroList.get(0).heroStrUp(-5);
                 Display.print("     [[LEVEL UP!]]     ");
                 Display.printInt(hero.heroList.get(0).heroLevel());
+                try {
+                    Output.fileWrite((hero.heroList.get(0).heroLevel()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                break;
 
             case SIDEARM:
                 Display.print("Reflex shot. Fortune favors the first.");
@@ -90,6 +116,11 @@ public class HeroActions {
                 hero.heroList.get(0).heroStrUp(-4);
                 Display.print("    [[LEVEL UP!]]    ");
                 Display.printInt(hero.heroList.get(0).heroLevel());
+                try {
+                    Output.fileWrite((hero.heroList.get(0).heroLevel()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
         }
 
@@ -114,8 +145,14 @@ public class HeroActions {
                     hero.heroList.get(0).heroHpUp(4);
                     Display.print("   [[LEVEL UP!]]");
                     Display.printInt(hero.heroList.get(0).heroLevel());
-                } else
+                    try {
+                        Output.fileWrite((hero.heroList.get(0).heroLevel()));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                } else {
                     Display.print("There's nothing else to find. Nice try though.");
+                }
 
                 Menus.nowGo();
                 break;
@@ -152,6 +189,11 @@ public class HeroActions {
                 hero.heroList.get(0).heroEnUp(2);
                 Display.print("   [[LEVEL UP!]]");
                 Display.printInt(hero.heroList.get(0).heroLevel());
+                try {
+                    Output.fileWrite((hero.heroList.get(0).heroLevel()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 Menus.nowGo();
                 break;
             case 4:
@@ -168,6 +210,11 @@ public class HeroActions {
                 Display.printInt(hero.heroList.get(0).getHeroStr());
                 Display.print("Total Hero Level:");
                 Display.printInt(hero.heroList.get(0).heroLevel());
+                try {
+                    Output.fileWrite((hero.heroList.get(0).heroLevel()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 Menus.nowGo();
 
                 break;

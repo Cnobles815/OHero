@@ -26,8 +26,6 @@ public class BattleEngine {
     }
 
     public int damage(){
-
-
         return 5;
     }
 

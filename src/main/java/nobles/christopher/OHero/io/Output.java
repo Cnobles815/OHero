@@ -20,7 +20,7 @@ public abstract class Output {
 
     public static void fileWrite(String output) throws IOException{
         String temp = output;
-        toFile = new FileWriter("test.txt", true);
+        toFile = new FileWriter("test.txt");
         toFile.write(temp + String.format("%n") + String.format("%n"));
         toFile.flush();
         toFile.close();
@@ -28,7 +28,7 @@ public abstract class Output {
 
     public static void fileWriteStringNoNewLine(String output) throws IOException{
         String temp = output;
-        toFile = new FileWriter("test.txt", true);
+        toFile = new FileWriter("test.txt");
         toFile.write(temp);
         toFile.flush();
         toFile.close();
@@ -36,7 +36,7 @@ public abstract class Output {
 
     public static void fileWrite(Integer output) throws IOException {
         Integer temp = output;
-        toFile = new FileWriter( "test.txt", true);
+        toFile = new FileWriter( "test.txt");
         toFile.write(temp + String.format("%n") + String.format("%n"));
         toFile.flush();
         toFile.close();
@@ -44,7 +44,7 @@ public abstract class Output {
 
     public static void fileWriteStringNoNewLine(Integer output) throws IOException{
         Integer temp = output;
-        toFile = new FileWriter( "test.txt", true);
+        toFile = new FileWriter( "test.txt");
         toFile.write(temp + String.format("%n") + String.format("%n"));
         toFile.flush();
         toFile.close();

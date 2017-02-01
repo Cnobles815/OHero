@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * heroStr = Strength, hp = Health Points, spd = Speed, en = Energy
  */
-public class Hero {
+public class Hero implements Comparable<Hero> {
     String heroName = "";
     int heroStr = 0;
     int heroHp = 0;
@@ -20,6 +20,7 @@ public class Hero {
         heroList.add(hero);
         return hero;
     }
+
 
 
 
@@ -131,7 +132,8 @@ public class Hero {
     }
 
 
-
-
-
+    @Override
+    public int compareTo(Hero o) {
+        return 0;
+    }
 }

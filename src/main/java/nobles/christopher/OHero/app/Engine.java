@@ -12,11 +12,7 @@ public class Engine {
     Hero hero;
     HeroActions heroActions = new HeroActions();
 
-
-
     public void opening() {
         Menus.opening();
     }
-
-
 }
